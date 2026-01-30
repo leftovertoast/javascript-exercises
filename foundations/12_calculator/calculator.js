@@ -34,19 +34,19 @@ const power = function(b, e) {
       return power;
 };
 
-const factorial = function(num) {
-    factor = null
-    if (num <= 1) {
-      return 1;
-    } else if (num === 2) {
-      return 2;
-    } else if (factor === null) {
-      factor = num;
-    } else for (i = num; i > 0;  i--) {
-        factor = factor * num;
-        };
-    return factor;
-    };
+const factorial = function(num) {  
+  if (num === 0 || num === 1) {
+    return 1;
+  } else if (num === 2) {
+    return 2;
+  } else {
+  let factor = 1;
+  for (i = (num - 1); i >= 1; --i) {
+    factor = factor + (factor * i);
+  }; 
+  return factor;
+};
+};
   
 
 // Do not edit below this line
